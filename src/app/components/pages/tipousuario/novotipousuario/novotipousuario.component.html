@@ -1,0 +1,76 @@
+<div class="historico" style="margin-top: -6px; margin-bottom:2px;">
+    <span class="header-story" style="margin-left: 2px;">                           
+        <a routerLink="/"> <small>Home</small> / </a>           
+        <a routerLink="../tipousuario"> <small>Tipo de usuário</small> / </a>
+        <a routerLink="../novotipousuario"> <small>Novo tipo de usuário</small> / </a>
+        <small>Edição</small>
+    </span> 
+</div>
+<div class="usuarios">
+    <h1>Tipo de usuário</h1>
+    <small>Cadastro e edição de tipo de usuário</small>
+</div>
+<div *ngIf="errormsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>{{errormsg}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div *ngIf="sucessmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{sucessmsg}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<form id="form-cad-tipousuario" class="form-horizontal" [formGroup]="userForm" (ngSubmit)="userSubmit()">
+<div class="salvar-cancelar">
+    <div class="salvar">   
+        <button id="btnSalvar">              
+            <i class="fa fa-save"></i>
+            <small>Salvar</small> 
+        </button>  
+    </div>
+    <div class="cancelar">   
+        <button id="btnCancelar" type="reset">
+            <i class="fa fa-close"></i> 
+            <small>Cancelar</small>
+        </button>                                               
+    </div>
+</div>
+
+<div class="panel widget light-widget panel-bd-top">
+    <section class="col-md-12" id="section2" style="background-color: #FFF;">
+        <div id="informacoesGerais">
+            <h3 style="color: #C63131">Filtro</h3>
+        </div>
+        <br>
+       
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="col-xs-4 col-form-label control-label">Bloqueado</label>
+                            <div class="controls col-xs-8">
+                                <input formControlName="bloqueado" class="check_blok" id="bloqueado" name="bloqueado" type="checkbox" [ng-true-value="1"] [ng-false-value="0"]>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="col-xs-4 col-form-label control-label">Tipo de Usuário</label>
+                            <div class="controls col-xs-8">
+                                <input formControlName="dstipousuario" class="form-control" for="tipoUsuario" id="tipoUsuario" name="tipoUsuario" type="text" placeholder="Informe o tipo de usuário">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="col-xs-4 col-form-label control-label">Observações</label>
+                            <div class="controls col-xs-8">
+                                <textarea formControlName="dsobservacao" class="form-control" for="ObsTipoUsuario" id="ObsTipoUsuario" name="ObsTipoUsuario" type="textarea" placeholder="Observações"></textarea>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        
+    </section>
+</div>
+</form>
