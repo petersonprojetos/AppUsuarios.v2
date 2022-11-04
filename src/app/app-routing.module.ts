@@ -14,7 +14,7 @@ import { NovousuarioComponent } from './components/pages/usuarios/novousuario/no
 import { NovotipousuarioComponent } from './components/pages/tipousuario/novotipousuario/novotipousuario.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'HomeComponent'},
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'tipousuario', component: TipousuarioComponent},
   {path: 'setor', component: SetorComponent},

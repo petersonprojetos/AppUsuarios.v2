@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl,Validators,FormGroup,ReactiveFormsModule} from '@angular/forms';
-import { ApiserviceService } from "../../../../services.service";
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+import { ApiserviceService } from '../../../../services.service';
 
 @Component({
   selector: 'app-novotipousuario',

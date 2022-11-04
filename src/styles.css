@@ -460,3 +460,5 @@ button.green{
 button.red{
     background-color: #FF4949;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
